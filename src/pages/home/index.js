@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet'
 import axios from 'axios'
+import Item from '../../components/item'
 
 export default class Home extends Component {
 
@@ -36,7 +37,7 @@ export default class Home extends Component {
                 {conteudo.stacks !== undefined && (
                   <ul>
                     {conteudo.stacks.map((item, indice) => (
-                      <li key={indice}>{item}</li>
+                     <Item indice={indice} item={item} />
                     ))}
                   </ul>
                 )}
